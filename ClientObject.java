@@ -8,6 +8,7 @@ import java.net.Socket;
 
 public class ClientObject {
 
+    private String name;
     private static int amount = 0;
     private int id;
     private Socket socket;
@@ -29,6 +30,7 @@ public class ClientObject {
                     )
                 ), true
             );
+            // name = in.readLine();
         }catch(IOException e){
 
         }
@@ -50,6 +52,14 @@ public class ClientObject {
 
     public int getId(){
         return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 
     public void closeSocket() throws IOException{
